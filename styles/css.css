@@ -1,0 +1,310 @@
+.updateMobile {
+    display: none;
+}
+
+.update {
+    height: 55px;
+    font-size: 20px;
+    border: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    color: #748488;
+    background-color: #c9d2d7;
+    border-radius: 12px;
+}
+
+#updateSize {
+    height: 25px;
+    width: 25px;
+}
+
+.m10 {
+    margin: 10px;
+}
+.mb25{
+    margin-bottom: 25px;
+}
+
+#weather {
+    height: 200px;
+    width: 200px;
+}
+
+.wind,
+.cloudy,
+.pressure,
+.humidity,
+.coordinates {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    background-color: #a8afb0;
+    color: white;
+    padding: 0.5em;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.infoName {
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.favorites {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #78868a;
+}
+
+#newCity {
+    text-align: right;
+    margin: auto 10px;
+}
+
+.buttonStyleBezButstrapa {
+    background: white;
+    border: 0;
+    height: 60px;
+    width: 60px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+
+.grid {
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    color: #748488;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+            "city cityDesc"
+            "favorites newCity"
+            "moreCities moreCities";
+}
+
+.moreCities {
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: 1fr 400px 1fr;*/
+    padding: 0;
+    list-style-type: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-areas:
+            "cityBlock cityBlock"
+            "cityBlock cityBlock"
+            "cityBlock cityBlock";
+}
+
+
+
+.cityBlock {
+    position: relative;
+    vertical-align: bottom;
+}
+
+.krest {
+    background: white;
+    border: 0;
+    height: 60px;
+    width: 60px;
+}
+
+.animeWeather {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+
+.temperature {
+    color: #848484;
+    font-size: 40px;
+    vertical-align: bottom;
+    margin-right: 20px;
+}
+
+.newCityInput {
+    font-size: 20px;
+    vertical-align: top;
+    height: 60px;
+    width: 240px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.name {
+    color: #848484;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.cityText {
+    color: #848484;
+    font-size: 60px;
+    margin: 10px;
+}
+
+#temperature {
+    color: #848484;
+    font-size: 100px;
+
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.cityName {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+
+.name,
+.animeWeather,
+.temperature,
+.krest {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+header {
+    max-width: 1080px;
+    display: flex;
+    font-size: 30px;
+    color: #848484;
+    padding: 0;
+    margin: auto;
+    text-align: left;
+}
+
+@media all and (max-width: 900px) {
+    .name {
+        font-size: 28px;
+    }
+    .temperature {
+        font-size: 28px;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .cityText{
+        font-size: 30px;
+    }
+    #temperature{
+        font-size: 100px;
+    }
+    #newCity {
+        text-align:left ;
+        margin: auto 10px;
+    }
+    .updateMobile {
+        display: inline;
+        height: 80px;
+        width: 80px;
+        background: white;
+        border: 0;
+        margin: auto 15px;
+        float: right;
+    }
+
+    .update {
+        display: none;
+    }
+    .moreCities {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+                "cityBlock"
+                "cityBlock"
+                "cityBlock"
+                "cityBlock"
+                "cityBlock"
+                "cityBlock";
+    }
+    .newCityInput{
+        width: 85%;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "city"
+                "cityDesc"
+                "favorites"
+                "newCity"
+                "moreCities"
+                "moreCities";
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+                "big-name"
+                "data"
+                "cityDesc"
+                "favorites"
+                "add-card"
+                "moreCities";
+    }
+
+    .newCity {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .newCityInput {
+        flex: 1;
+    }
+
+    .buttonStyleBezButstrapa {
+        flex: none;
+        background: white;
+        border: 0;
+        height: 60px;
+        width: 12%;
+    }
+
+
+}
+
+@media all and (max-width: 500px) {
+    .newCityInput{
+        width: 70%;
+    }
+    .buttonStyleBezButstrapa {
+        flex: none;
+        background: white;
+        border: 0;
+        height: 60px;
+        width: 10%;
+    }
+}
+#buttonDonate{
+
+}
+.buttonDonate{
+    height: 70px;
+    width: 80px
+}
+.krestStyles{
+    width: 50px;
+    height: 50px
+}

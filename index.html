@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeatherWeb</title>
+    <link rel="stylesheet" href="styles/css.css">
+    <script src="js/preload.js"></script>
+
+</head>
+
+<body>
+<header>
+    <h1 class="m10">Погода здесь</h1>
+    <button class="update" onclick="alertLocation()">
+        Обновить геолокацию
+    </button>
+    <button class="updateMobile">
+        <img src="img/cycle.png" id="updateSize" alt="update">
+    </button>
+</header>
+
+<main class="grid-container">
+    <div class="grid">
+        <div class="city">
+            <h2 class="cityText" id="city-name">Данные загружаются</h2>
+            <div class="data">
+                <img id="weather" src="img/weather.png" alt="weatherIcon">
+                <div id="temperature"><span id="temp"></span>°C</div>
+            </div>
+        </div>
+
+        <ul>
+            <li class="wind">
+                <div class=infoName>Ветер</div>
+                <div class="info">Ветер, <span id="wind-speed">Данные загружаются</span> m/s, North-northwest</div>
+            </li>
+            <li class="cloudy">
+                <div class=infoName>Облачность</div>
+                <div class="info" id="clouds">Данные загружаются</div>
+            </li>
+            <li class="pressure">
+                <div class=infoName>Давление</div>
+                <div class="info"><span id="pressure">Данные загружаются</span> hpa</div>
+            </li>
+            <li class="humidity">
+                <div class=infoName>Влажность</div>
+                <div class="info"><span id="humidity">Данные загружаются</span>%</div>
+            </li>
+            <li class="coordinates">
+                <div class=infoName>Координаты</div>
+                <div class="info">[<span id="latitude">Данные загружаются</span>, <span id="longitude">Данные загружаются</span>]
+                </div>
+            </li>
+        </ul>
+        <div class="favorites">
+            <h2>Избранное</h2>
+        </div>
+        <form id="newCity">
+            <label>
+                <input class="newCityInput" type="text" placeholder="Добавить новый город" id="newCityName">
+            </label>
+            <button type="submit" class="buttonStyleBezButstrapa" id="buttonDonate">
+                <img src="img/buttonDonate.png" alt="button" class="buttonDonate">
+            </button>
+        </form>
+    </div>
+    <ul class="moreCities" id="FavouritesCities">
+    </ul>
+</main>
+<template id="favouriteTemplate">
+    <li class="cityBlock mb25">
+        <div class="cityName">
+            <h3 class="name prefill" name="city-name"></h3>
+            <div class="temperature"><span class="prefill" name="favourite_temperature">°C</span></div>
+            <img class="animeWeather" src="img/animeWeather.jpeg" alt="weatherIcon">
+            <button class="krest">
+                <img class="krestStyles" onclick="clearFavourite(this);" src="img/animeKrest-removebg-preview.png"
+                     alt="krest">
+            </button>
+        </div>
+        <div class="cityDesc">
+            <ul>
+                <li class="wind">
+                    <div class=infoName>Ветер</div>
+                    <div class="info">Moderate breeze, <span class="prefill" name="favourite_wind"> m/s</span>,
+                        North-northwest
+                    </div>
+                </li>
+                <li class="cloudy">
+                    <div class=infoName>Облачность</div>
+                    <div class="info"><span class="prefill" name="favourite_clouds"></span></div>
+                </li>
+                <li class="pressure">
+                    <div class=infoName>Давление</div>
+                    <div class="info"><span class="prefill" name="favourite_pressure">hpa</span></div>
+                </li>
+                <li class="humidity">
+                    <div class=infoName>Влажность</div>
+                    <div class="info"><span class="prefill" name="favourite_humidity">%</span></div>
+                </li>
+                <li class="coordinates">
+                    <div class=infoName>Координаты</div>
+                    <div class="info">[<span class="prefill" name="favourite_latitude"></span>,<span class="prefill"
+                                                                                                     name="favourite_longitude"></span>]
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+</template>
+
+<script src="js/weather.js"></script>
+<script src="js/geolocation.js"></script>
+<script src="js/localstoragehandler.js"></script>
+
+<script>
+    localStorageInit();
+    alertLocation();
+</script>
+<script src="js/favourites.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<li class="cityBlock mb25">
+            <div class="cityName">
+                <h3 class="name" name="city-name"></h3>
+                <div class="temperature"><span name="latitude">°C</span></div>
+                <img class="animeWeather" src="img/animeWeather.jpeg" alt="weatherIcon">
+                <button class="krest">
+                    <img class="krestStyles" src="img/animeKrest-removebg-preview.png" alt="krest">
+                </button>
+            </div>
+            <div class="cityDesc">
+                <ul>
+                    <li class="wind">
+                        <div class=infoName>Ветер</div>
+                        <div class="info">Moderate breeze, <span name="wind"> m/s</span>, North-northwest</div>
+                    </li>
+                    <li class="cloudy">
+                        <div class=infoName>Облачность</div>
+                        <div class="info"><span name="clouds"></span></div>
+                    </li>
+                    <li class="pressure">
+                        <div class=infoName>Давление</div>
+                        <div class="info"><span name="pressure">hpa</span></div>
+                    </li>
+                    <li class="humidity">
+                        <div class=infoName>Влажность</div>
+                        <div class="info"><span name="humidity">%</span></div>
+                    </li>
+                    <li class="coordinates">
+                        <div class=infoName>Координаты</div>
+                        <div class="info">[<span name="latitude"></span>,<span name="longitude"></span>]</div>
+                    </li>
+                </ul>
+            </div>
+        </li>

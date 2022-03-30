@@ -1,5 +1,5 @@
 async function requestWeather(latitude, longitude, onAnswer) {
-    let url = "http://51.38.128.132:8080/weather/coordinates?lat=" + latitude + "&lon=" + longitude;
+    let url = "http://localhost:3000/weather/coordinates?lat=" + latitude + "&lon=" + longitude;
     await fetch(url)
         .then(data => {
             return data.json()
@@ -9,7 +9,7 @@ async function requestWeather(latitude, longitude, onAnswer) {
         });
 }
 async function getFastWeather(city, onAnswer) {
-    let url = "http://51.38.128.132:8080/weather/city?q=" + urlEncode(city);
+    let url = "http://localhost:3000/weather/city?q=" + urlEncode(city);
     await fetch(url)
         .then(data => {
             return data.json()
@@ -22,7 +22,7 @@ async function getFastWeather(city, onAnswer) {
 
 
 async function getFastWeather(city, onAnswer, catched) {
-    let url = "http://51.38.128.132:8080/weather/city?q=" + city;
+    let url = "http://localhost:3000/weather/city?q=" + city;
     await fetch(url)
         .then(data => {
             return data.json()

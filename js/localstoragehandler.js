@@ -2,7 +2,7 @@ function localStorageInit() {
 
 }
 
-let url = "http://51.38.128.132:8080/favourites";
+let url = "http://localhost:3000/favourites";
 
 async function getAllFavourites() {
     let response = await fetch(url);
